@@ -1,0 +1,151 @@
+{
+  "users": [
+    {
+      "username": "Admin",
+      "email": "admin@gmail.com",
+      "password": "1234",
+      "role": "Admin",
+      "status": "Active",
+      "id": 1,
+      "cart": []
+    },
+    {
+      "username": "Zakki",
+      "email": "zakki@mail.com",
+      "password": "1234",
+      "role": "User",
+      "status": "Active",
+      "cart": [],
+      "id": 2
+    },
+    {
+      "username": "aaaaq",
+      "email": "test@mail.com",
+      "password": "1234",
+      "role": "User",
+      "status": "Active",
+      "cart": [],
+      "id": 3
+    },
+    {
+      "username": "aaaa1",
+      "email": "test@mail.com",
+      "password": "1234",
+      "role": "User",
+      "status": "Active",
+      "cart": [],
+      "id": 4
+    },
+    {
+      "username": "aaaa1",
+      "email": "test@mail.com",
+      "password": "1234",
+      "role": "User",
+      "status": "Active",
+      "cart": [],
+      "id": 5
+    },
+    {
+      "username": "aaaa1",
+      "email": "test@mail.com",
+      "password": "1234",
+      "role": "User",
+      "status": "Active",
+      "cart": [],
+      "id": 6
+    },
+    {
+      "username": "",
+      "email": "",
+      "password": "",
+      "role": "User",
+      "status": "Active",
+      "cart": [],
+      "id": 7
+    },
+    {
+      "username": "test123",
+      "email": "test@mail.com",
+      "password": "1234",
+      "role": "User",
+      "status": "Active",
+      "cart": [],
+      "id": 8
+    },
+    {
+      "username": "Dio",
+      "email": "dio@mail.com",
+      "password": "1234",
+      "role": "User",
+      "status": "Active",
+      "cart": [],
+      "id": 9
+    }
+  ],
+  "products": [
+    {
+      "nama": "Jeruk",
+      "berat": "140gr",
+      "kategori": "Buah",
+      "harga": 2285,
+      "stock": [
+        {
+          "id": null,
+          "type": "Mandarin",
+          "qty": 10
+        }
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1557800636-894a64c1696f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1965&q=80"
+      ]
+    },
+    {
+      "nama": "Semangka",
+      "berat": "3kg",
+      "kategori": "Buah",
+      "harga": 20000,
+      "stock": [
+        {
+          "id": null,
+          "type": "Sweet Beauty",
+          "qty": 10
+        }
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1539248519424-b4b8f9a99a4a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+      ]
+    },
+    {
+      "nama": "Pisang",
+      "berat": "2.5kg",
+      "kategori": "Buah",
+      "harga": 30000,
+      "stock": [
+        {
+          "id": null,
+          "type": "Ambon",
+          "qty": 10
+        }
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1587132137056-bfbf0166836e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+      ]
+    },
+    {
+      "nama": "Nanas",
+      "berat": "600gr",
+      "kategori": "Buah",
+      "harga": 9500,
+      "stock": [
+        {
+          "id": null,
+          "type": "Abacaxi",
+          "qty": 10
+        }
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+      ]
+    }
+  ]
+}
