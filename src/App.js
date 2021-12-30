@@ -7,6 +7,8 @@ import { connect } from 'react-redux';
 import { onLogin, onLogout } from './redux/actions';
 import ManagementArticle from './pages/ManagementArticle';
 import NavbarComponent from './component/Navbar';
+import ProductPage from './pages/Product';
+import ProductDetail from './pages/ProductDetail';
 
 
 
@@ -14,10 +16,10 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      loading:true
     }
   }
-  componentDidMount() {
+  componentDidMount() { 
     this.keepLogin()
   }
   keepLogin = async() => {
@@ -25,8 +27,12 @@ class App extends React.Component {
       let local = localStorage.getItem("data")
       if (local) {
         local = JSON.parse(local)
-        await this.props.onLogin(local.username, local.password)
-
+        let res = await this.props.onLogin(local.username, local.password)
+        if(res.success){
+          this.setState({loading:false})
+        }
+      }else{
+        this.setState({loading:false})
       }
     } catch (error) {
       console.log(error)
@@ -36,9 +42,11 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <NavbarComponent />
+        <NavbarComponent loading={this.state.loading} />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/products" element={<ProductPage />} />
+          <Route path="/product-detail" element={<ProductDetail />} />
           <Route path="/management-article" element={<ManagementArticle />} />
         </Routes>
       </div>

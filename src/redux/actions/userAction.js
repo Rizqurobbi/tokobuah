@@ -6,8 +6,8 @@ export const onLogin = (username, password) => {
         try {
             let res = await axios.get(`${API_URL}/users?username=${username}&password=${password}`)
             if (res.data.length > 0) {
-                console.log("data",res.data)
                 localStorage.setItem("data", JSON.stringify(res.data[0]))
+                console.log("data",res.data)
                 dispatch({
                     type: "LOGIN_SUCCESS",
                     payload: res.data[0],

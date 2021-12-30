@@ -111,26 +111,39 @@ class NavbarComponent extends React.Component {
     render() {
         return (
             <div>
-                <Navbar expand="md" className="shadow">
-                    <NavbarBrand>
-                        <Link to="/">
-                            <img src="https://cdn.shopify.com/s/files/1/0572/5005/4294/files/cc-removebg-preview.png?v=1624871969" alt="logo-brand" width="80px" />
-                        </Link>
-                    </NavbarBrand>
+                <Navbar expand="md" className="shadow" fixed='top' color="white">
+
                     <NavbarToggler onClick={() => this.setState({ openCollapse: !this.state.openCollapse })} />
                     <Collapse isOpen={this.state.openCollapse} navbar>
                         <Nav>
                             <NavItem>
-                                <Link className="nav-link" to="/products" style={{color:'red'}}>
+                                <Link className="nav-link" to="/" style={{ color: 'red' }}>
+                                    Home
+                                </Link>
+                            </NavItem>
+                            <NavItem>
+                                <Link className="nav-link" to="/products" style={{ color: 'red' }}>
                                     Product
                                 </Link>
                             </NavItem>
                             <NavItem>
-                                <NavLink style={{color:'red'}}>
+                                <NavLink style={{ color: 'red' }}>
                                     About
                                 </NavLink>
                             </NavItem>
                         </Nav>
+                        <NavbarBrand >
+                            <Link to="/">
+                                <img style={{
+                                    position: 'absolute',
+                                    top: 0,
+                                    bottom: 0,
+                                    left: 0,
+                                    right: 0,
+                                    margin: 'auto',
+                                }} src="https://cdn.shopify.com/s/files/1/0572/5005/4294/files/cc-removebg-preview.png?v=1624871969" alt="logo-brand" width="120px" />
+                            </Link>
+                        </NavbarBrand>
                         {
                             this.props.loading ?
                                 <Spinner style={{ marginLeft: "auto", marginRight: 50 }}>Loading...</Spinner>
@@ -146,17 +159,17 @@ class NavbarComponent extends React.Component {
                                                 <DropdownMenu right>
                                                     <Link to="/cart-user" style={{ color: "#2d3436", textDecoration: "none" }}>
                                                         <DropdownItem>
-                                                            Cart
+                                                            Products
                                                         </DropdownItem>
                                                     </Link>
                                                     <Link to="history-user" style={{ color: "#2d3436", textDecoration: "none" }}>
                                                         <DropdownItem>
-
+                                                            Cart
                                                         </DropdownItem>
                                                     </Link>
                                                     <Link to="" style={{ color: "#2d3436", textDecoration: "none" }}>
                                                         <DropdownItem>
-                                                            Profile
+                                                            History
                                                         </DropdownItem>
                                                     </Link>
                                                     <DropdownItem divider />
@@ -193,13 +206,13 @@ class NavbarComponent extends React.Component {
                     </Collapse>
                     <ModalLogin
                         btClose={() => this.setState({ modalLogin: !this.state.modalLogin })}
-                        modalOpen={this.state.modalLogin} 
-                        modalOpenRegis={() => this.setState({ modalRegis: !this.state.modalRegis })} 
-                        />
+                        modalOpen={this.state.modalLogin}
+                        modalOpenRegis={() => this.setState({ modalRegis: !this.state.modalRegis })}
+                    />
                     <ModalRegister
                         btClose={() => this.setState({ modalRegis: !this.state.modalRegis })}
-                        modalOpen={this.state.modalRegis} 
-                        modalOpenLogin={() => this.setState({ modalLogin: !this.state.modalLogin })}/>
+                        modalOpen={this.state.modalRegis}
+                        modalOpenLogin={() => this.setState({ modalLogin: !this.state.modalLogin })} />
                 </Navbar>
 
             </div>
