@@ -22,9 +22,8 @@ import { useSelector } from 'react-redux';
 
 //          let res = await dispatch(onLogin(username, password))
 //          if(res){
-//              alert("berhasil")
-//          }else{
-//              alert("gagal")
+//              props.btClose()
+
 //          }
 //      } catch (error) {
 //          console.log(error)
@@ -38,11 +37,11 @@ import { useSelector } from 'react-redux';
 //             <ModalBody>
 //                 <FormGroup>
 //                     <Label for="textNama">Username</Label>
-//                     <Input type="text" id="textNama" innerRef={(e)=>setUsername(e)} />
+//                     <Input type="text" id="textNama" onChange={(e) =>setUsername(e.target.value)} />
 //                 </FormGroup>
 //                 <FormGroup>
 //                     <Label for="textPass">Password</Label>
-//                     <Input type="text" id="textPass" onChange={(e) =>setPassword(e)} />
+//                     <Input type="text" id="textPass" onChange={(e) =>setPassword(e.target.value)} />
 //                     {console.log(username)}
 //                 </FormGroup>
 //             </ModalBody>

@@ -72,8 +72,8 @@ class ModalRegister extends React.Component {
                 <Container style={{ padding: '5vw' }}>
 
                     <ModalHeader >
-                        <img style={{ marginLeft: '7vh' }} src="https://cdn.shopify.com/s/files/1/0572/5005/4294/files/cc-removebg-preview.png?v=1624871969" width="180px" />
-                        <p style={{ marginLeft: '5vh' }}>Make your account here!</p>
+                        <img style={{ marginLeft: '8vh' }} src="https://cdn.shopify.com/s/files/1/0572/5005/4294/files/cc-removebg-preview.png?v=1624871969" width="180px" />
+                        <p style={{ marginLeft: '7vh' }}>Make your account here!</p>
                     </ModalHeader>
                     <ModalBody>
                         <FormGroup>

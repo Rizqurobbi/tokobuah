@@ -58,7 +58,7 @@
   "products": [
     {
       "nama": "Orange",
-      "berat": "140gr",
+      "berat": 140,
       "kategori": "Buah",
       "harga": 2285,
       "stock": [
@@ -72,11 +72,14 @@
         "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/11.1.jpg?v=1623396707",
         "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/11.4.jpg?v=1623396708"
       ],
+      "manfaat":[
+        "Oranges are a rich source of carotenoid. The Vitamin A present in them play an important role in keeping the mucus membranes in the eyes healthy. Vitamin A is also responsible to prevent age-related mascular degeneration, which in extreme cases can lead to blindness. It also helps eyes to absorb the light."    
+      ],
       "id": 1
     },
     {
       "nama": "Watermelon",
-      "berat": "3kg",
+      "berat": 3000,
       "kategori": "Buah",
       "harga": 20000,
       "stock": [
@@ -90,11 +93,14 @@
         "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/10.1.jpg?v=1623396512",
         "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/10.3.jpg?v=1623396512"
       ],
+      "manfaat":[
+        "Several nutrients in watermelon may support heart health.Heart disease is the leading cause of death worldwide. It’s worth noting that lifestyle factors like diet may lower your risk of heart attack and stroke by reducing your blood pressure and cholesterol levels .Studies suggest that lycopene may help lower cholesterol and blood pressure. It may also help prevent oxidative damage caused by high cholesterol levels .Watermelon also contains citrulline, an amino acid that may increase nitric oxide levels in your body. Nitric oxide helps your blood vessels expand, which lowers blood pressure .Other heart-healthy vitamins and minerals in watermelon include magnesium, potassium, and vitamins A, B6, and C ."    
+      ],
       "id": 2
     },
     {
       "nama": "Banana",
-      "berat": "2.5kg",
+      "berat": 2500,
       "kategori": "Buah",
       "harga": 30000,
       "stock": [
@@ -108,29 +114,14 @@
         "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/2.1.jpg?v=1623394147",
         "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/2.2.jpg?v=1623394148"
       ],
+      "manfaat":[
+        "Bananas may not be overflowing with calcium, but they are still helpful in keeping bones strong. According to a 2009 article in the Journal of Physiology and Biochemistry, bananas contain an abundance of fructooligosaccharides. These are non-digestive carbohydrates that encourage digestive-friendly probiotics and enhance the body's ability to absorb calcium."    
+      ],
       "id": 3
     },
     {
-      "nama": "Pineapple",
-      "berat": "600gr",
-      "kategori": "Buah",
-      "harga": 9500,
-      "stock": [
-        {
-          "id": null,
-          "type": "Abacaxi",
-          "qty": 10
-        }
-      ],
-      "images": [
-        "https://sc04.alicdn.com/kf/Ubb566e6691ef4550b46064686426357bL.jpg",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG9wjmiUQzhyku79AbbM3LAA9JanM8H82R8A&usqp=CAU"
-      ],
-      "id": 4
-    },
-    {
-      "nama": "Manggo",
-      "berat": "260gr",
+      "nama": "Mango",
+      "berat": 260,
       "kategori": "Buah",
       "harga": 9500,
       "stock": [
@@ -144,11 +135,14 @@
         "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/5.1.jpg?v=1623395055",
         "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/5.2.jpg?v=1623395055"
       ],
-      "id": 5
+      "manfaat":[
+        "Mangos can help stabilize your digestive system. They offer both amylase compounds and dietary fiber, which can help you avoid constipation. Amylase compounds can help dissolve other foods in your stomach, breaking down difficult starches. Meanwhile, the fiber in mangos can be more effective for relieving constipation than equivalent fiber supplements."    
+      ],
+      "id": 4
     },
     {
       "nama": "Durian",
-      "berat": "7kg",
+      "berat": 7000,
       "kategori": "Buah",
       "harga": 9500,
       "stock": [
@@ -162,11 +156,14 @@
         "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/13.1.jpg?v=1623397015",
         "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/13.4.jpg?v=1623397016"
       ],
-      "id": 6
+      "manfaat":[
+        "The manganese in durian may help in the maintenance of blood sugar levels. In one study, the intake of durian had also improved the insulin response curve in 10 patients with diabetes. The antioxidants in durian also help reduce oxidative stress, which can otherwise aggravate diabetes symptoms. Durian also has a lower glycemic index (GI). Hence, the fruit would not lead to blood sugar spikes."    
+      ],
+      "id": 5
     },
     {
       "nama": "Kiwi",
-      "berat": "600gr",
+      "berat": 600,
       "kategori": "Buah",
       "harga": 9500,
       "stock": [
@@ -180,11 +177,14 @@
         "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/15.1.jpg?v=1623662840",
         "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/15.2.jpg?v=1623662840"
       ],
-      "id": 7
+      "manfaat":[
+        "Oxidative stress is the imbalance of free radicals and antioxidants in your body. This process can also cause strand breakage of DNA. This can lead to health problems, some of which can be hard to detect or treat. Kiwi fruit contains antioxidants that can reduce oxidative stress. A study that tested people’s cells by damaging them with peroxide, showed that those who supplemented with kiwi showed an improved ability of the DNA to repair itself after applying the peroxide. This means that kiwi might help prevent long-term cancers and lifestyle diseases such as colon cancer, which is closely linked to DNA damage. "    
+      ],
+      "id": 6
     },
     {
       "nama": "Avocado",
-      "berat": "600gr",
+      "berat": 600,
       "kategori": "Buah",
       "harga": 9500,
       "stock": [
@@ -198,11 +198,14 @@
         "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/7.1.jpg?v=1623395436",
         "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/7.2.jpg?v=1623395436"
       ],
-      "id": 8
+      "manfaat":[
+        "Avocados are a good source of folateTrusted Source, which plays an important role in overall dietary health. Studies have also found links between low folate levels and depression.Folate helps prevent the buildup of homocysteine, a substance that can impair circulation and delivery of nutrients to the brain. Reviews of past researchTrusted Source have linked excess homocysteine with cognitive dysfunction, depression, and the production of serotonin, dopamine, and norepinephrine, which regulate mood, sleep, and appetite."
+      ],
+      "id": 7
     },
     {
       "nama": "Peaches",
-      "berat": "600gr",
+      "berat": 600,
       "kategori": "Buah",
       "harga": 9500,
       "stock": [
@@ -216,11 +219,14 @@
         "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/8.1.jpg?v=1623395812",
         "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/8.3.jpg?v=1623395812"
       ],
-      "id": 9
+      "manfaat":[
+        "Antioxidants found in peaches are known to combat oxidative stress, which is essentially an imbalance between the production of cell-damaging free radicals and the body's ability to counter their harmful effects. That’s key for brain health, as oxidative stress is known to be a causative factor in neurodegenerative diseases such as Alzheimer's."    
+      ],
+      "id": 8
     },
     {
       "nama": "Guava",
-      "berat": "600gr",
+      "berat": 600,
       "kategori": "Buah",
       "harga": 9500,
       "stock": [
@@ -234,11 +240,14 @@
         "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/16.1.jpg?v=1623397473",
         "https://images.unsplash.com/photo-1536511132770-e5058c7e8c46?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
       ],
-      "id": 10
+      "manfaat":[
+        "Guava leaves have a potent anti-inflammatory action and a powerful antibacterial ability which fights infection and kills germs. Thus, consuming guava leaves works as a fantastic home remedy for toothache. The juice of guava leaves has also been known to cure toothaches, swollen gums and oral ulcers."
+      ],
+      "id": 9
     },
     {
       "nama": "Apple",
-      "berat": "600gr",
+      "berat": 600,
       "kategori": "Buah",
       "harga": 9500,
       "stock": [
@@ -252,29 +261,14 @@
         "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/4.1.jpg?v=1623394726",
         "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/4.2.jpg?v=1623394726"
       ],
-      "id": 11
-    },
-    {
-      "nama": "Papaya",
-      "berat": "600gr",
-      "kategori": "Buah",
-      "harga": 9500,
-      "stock": [
-        {
-          "id": null,
-          "type": "Tainung",
-          "qty": 10
-        }
+      "manfaat":[
+        "If you have type 2 diabetes, consider adding apples to your diet. Sure, they’re a fruit, but it’s a common misconception that people with diabetes can’t eat fruit.In this case, apples’ soluble fiber can help slow the absorption of sugar into the bloodstream and may improve blood sugar levels, the Mayo Clinic notes. Plus, per Mayo, a healthy diet that includes insoluble fiber can lower your odds of developing type 2 diabetes in the first place.Furthermore, a study of people with type 2 diabetes published in August 2016 in Experimental and Therapeutic Medicine found that regularly consuming soluble fiber helped reduce insulin resistance and improved blood sugar and triglyceride levels."
       ],
-      "images": [
-        "https://static.luxofood.com/2020/07/omid-papaya.jpg",
-        "data:image/jpeg;base64,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"
-      ],
-      "id": 12
+      "id": 10
     },
     {
       "nama": "Pomegranate",
-      "berat": "600gr",
+      "berat": 600,
       "kategori": "Buah",
       "harga": 9500,
       "stock": [
@@ -288,7 +282,84 @@
         "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/12.1.jpg?v=1623396849",
         "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/12.3.jpg?v=1623396849"
       ],
+      "manfaat":[
+        "With increasing age and the type of lifestyle we live, the walls of our arteries become harder due to cholesterol, resulting in blockages sometimes. The anti-oxidant property of pomegranate prevents bad cholesterol from oxidizing. So, eating pomegranates removes the excess fat and prevents the hardening of artery walls."
+      ],
+      "id": 11
+    },
+    {
+      "nama": "Pineapple",
+      "berat": 600,
+      "kategori": "Buah",
+      "harga": 9500,
+      "stock": [
+        {
+          "id": null,
+          "type": "Abacaxi",
+          "qty": 10
+        }
+      ],
+      "images": [
+        "https://sc04.alicdn.com/kf/Ubb566e6691ef4550b46064686426357bL.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG9wjmiUQzhyku79AbbM3LAA9JanM8H82R8A&usqp=CAU"
+      ],
+      "manfaat":[
+        "Along with calcium, the trace mineral manganese is essential for maintaining strong bones, according to the University of Rochester Medical Center. Pineapple is one of the top food sources of the mineral, according to Oregon State University — a single cup of pineapple contains about 76 percent of the recommended daily value of manganese. Manganese may help stave off osteoporosis and helps improve overall bone and mineral density, according to Oregon State University. Be careful not to overdo it, though — manganese intake can be dangerous and may increase the risk of cognitive disorders if you consume more than 11 mg per day, according to a study published in The Open Orthopaedics Journal. But don’t fret: It’d be difficult to reach those levels because ½ cup pineapple has less than 1 mg manganese, Andrews says."
+      ],
+      "id": 12
+    },
+    {
+      "nama": "Papaya",
+      "berat": 600,
+      "kategori": "Buah",
+      "harga": 9500,
+      "stock": [
+        {
+          "id": null,
+          "type": "Tainung",
+          "qty": 10
+        }
+      ],
+      "images": [
+        "https://static.luxofood.com/2020/07/omid-papaya.jpg",
+        "data:image/jpeg;base64,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"
+      ],
+      "manfaat":[
+        "Papaya is also great for hair because it contains vitamin A, a nutrient required for sebum production, which keeps hair moisturized. Vitamin A is also necessary for the growth of all bodily tissues, including skin and hair. Adequate intake of vitamin C, which papaya can provide, is needed for the building and maintenance of collagen, which provides structure to skin."
+      ],
       "id": 13
+    }
+  ],
+  "userTransactions": [
+    {
+      "iduser": 2,
+      "username": "Zakki",
+      "invoice": "#INV/1641062846861",
+      "date": "1/2/2022",
+      "totalPrice": 28500,
+      "shipping": 5700,
+      "totalPayment": 34200,
+      "totalBeratBuah": 1460,
+      "detail": [
+        {
+          "nama": "Peaches",
+          "harga": 9500,
+          "berat": 600,
+          "image": "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/8.1.jpg?v=1623395812",
+          "type": "Abacaxi",
+          "qty": 2
+        },
+        {
+          "nama": "Manggo",
+          "harga": 9500,
+          "berat": 260,
+          "image": "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/5.1.jpg?v=1623395055",
+          "type": "Arumanis",
+          "qty": 1
+        }
+      ],
+      "status": "Menunggu Konfirmasi",
+      "id": 1
     }
   ]
 }

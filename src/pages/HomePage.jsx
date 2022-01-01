@@ -22,7 +22,7 @@ const HomePage =(props)=>{
         })
     }
     return(
-        <div>
+        <div className="container-fluid">
             <text>Halo</text>
             {PrintProduct()}
         </div>

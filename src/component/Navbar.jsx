@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { connect, useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { Button, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink, Collapse, DropdownToggle, UncontrolledDropdown, DropdownMenu, DropdownItem, Spinner } from 'reactstrap';
+import { Button, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink, Collapse, DropdownToggle, UncontrolledDropdown, DropdownMenu, DropdownItem, Spinner, Badge } from 'reactstrap';
 import { onLogin, onLogout, onRegis } from '../redux/actions';
 import ModalLogin from './ModalLogin';
 import ModalRegister from './ModalRegister';
@@ -157,14 +157,14 @@ class NavbarComponent extends React.Component {
                                             this.props.role == "User"
                                                 ?
                                                 <DropdownMenu right>
-                                                    <Link to="/cart-user" style={{ color: "#2d3436", textDecoration: "none" }}>
+                                                    <Link to="/products" style={{ color: "#2d3436", textDecoration: "none" }}>
                                                         <DropdownItem>
                                                             Products
                                                         </DropdownItem>
                                                     </Link>
-                                                    <Link to="history-user" style={{ color: "#2d3436", textDecoration: "none" }}>
+                                                    <Link to="cart-user" style={{ color: "#2d3436", textDecoration: "none" }}>
                                                         <DropdownItem>
-                                                            Cart
+                                                            Cart<Badge color="danger" style={{borderRadius:10,}}>{this.props.cart.length}</Badge>
                                                         </DropdownItem>
                                                     </Link>
                                                     <Link to="" style={{ color: "#2d3436", textDecoration: "none" }}>

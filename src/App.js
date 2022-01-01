@@ -9,6 +9,7 @@ import ManagementArticle from './pages/ManagementArticle';
 import NavbarComponent from './component/Navbar';
 import ProductPage from './pages/Product';
 import ProductDetail from './pages/ProductDetail';
+import CartPage from './pages/CartPage';
 
 
 
@@ -47,6 +48,7 @@ class App extends React.Component {
           <Route path="/" element={<HomePage />} />
           <Route path="/products" element={<ProductPage />} />
           <Route path="/product-detail" element={<ProductDetail />} />
+          <Route path="/cart-user" element={<CartPage />} />
           <Route path="/management-article" element={<ManagementArticle />} />
         </Routes>
       </div>
