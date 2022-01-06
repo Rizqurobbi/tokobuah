@@ -2,7 +2,7 @@ import { useState } from "react"
 import React from 'react';
 import { connect, useDispatch } from "react-redux"
 import { onRegis } from "../redux/actions"
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input, Row, Col, Toast, ToastHeader, ToastBody, Container } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input, Row, Col, Toast, ToastHeader, ToastBody, Container, InputGroup, InputGroupText } from 'reactstrap';
 import axios from "axios";
 import { API_URL } from "../helper";
 
@@ -14,6 +14,8 @@ class ModalRegister extends React.Component {
             toastHeader: "",
             toastMessage: "",
             toastIcon: "",
+            passShow: "",
+            passType: ""
 
         }
     }
@@ -56,6 +58,23 @@ class ModalRegister extends React.Component {
         }
 
     }
+    btnShowPass = () => {
+        if (this.state.passType == "password") {
+            this.setState({
+                passShow: <span class="material-icons">
+                    visibility
+                </span>,
+                passType: "text"
+            })
+        } else {
+            this.setState({
+                passShow: <span class="material-icons">
+                    visibility_off
+                </span>,
+                passType: "password"
+            })
+        }
+    }
     render() {
         return (
             <Modal id='modalRegis' isOpen={this.props.modalOpen} toggle={this.props.btClose} centered>
@@ -86,7 +105,10 @@ class ModalRegister extends React.Component {
                         </FormGroup>
                         <FormGroup>
                             <Label for="textPass">Password</Label>
-                            <Input type="text" id="textPass" innerRef={(e) => this.password = e} />
+                            <InputGroup>
+                                <Input type={this.state.passType} id="textPass" innerRef={(e) => this.password = e} />
+                                <InputGroupText style={{ cursor: 'pointer',background:'transparent' }} onClick={this.btnShowPass}>{this.state.passShow}</InputGroupText>
+                            </InputGroup>
                         </FormGroup>
                     </ModalBody>
                     <ModalFooter>

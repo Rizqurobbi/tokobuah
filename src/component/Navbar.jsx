@@ -110,8 +110,8 @@ class NavbarComponent extends React.Component {
     }
     render() {
         return (
-            <div>
-                <Navbar expand="md" className="shadow" fixed='top' color="white">
+            <div style={{marginBottom:'10vh'}}>
+                <Navbar expand="md" className="shadow" fixed='top' color="white" >
 
                     <NavbarToggler onClick={() => this.setState({ openCollapse: !this.state.openCollapse })} />
                     <Collapse isOpen={this.state.openCollapse} navbar>
@@ -122,12 +122,12 @@ class NavbarComponent extends React.Component {
                                 </Link>
                             </NavItem>
                             <NavItem>
-                                <Link className="nav-link" to="/products" style={{ color: 'red' }}>
+                                <Link className="nav-link" to="/products" style={{ color: '#BE0B06' }}>
                                     Product
                                 </Link>
                             </NavItem>
                             <NavItem>
-                                <NavLink style={{ color: 'red' }}>
+                                <NavLink style={{ color: '#BE0B06' }}>
                                     About
                                 </NavLink>
                             </NavItem>
@@ -167,7 +167,7 @@ class NavbarComponent extends React.Component {
                                                             Cart<Badge color="danger" style={{borderRadius:10,}}>{this.props.cart.length}</Badge>
                                                         </DropdownItem>
                                                     </Link>
-                                                    <Link to="" style={{ color: "#2d3436", textDecoration: "none" }}>
+                                                    <Link to="history-user" style={{ color: "#2d3436", textDecoration: "none" }}>
                                                         <DropdownItem>
                                                             History
                                                         </DropdownItem>
@@ -179,14 +179,24 @@ class NavbarComponent extends React.Component {
                                                 </DropdownMenu>
                                                 :
                                                 <DropdownMenu right >
-                                                    <Link to="/product-management" style={{ color: "#2d3436" }} className="nav-link">
+                                                    {/* <Link to="/product-management" style={{ color: "#2d3436" }} className="nav-link">
                                                         <DropdownItem>
                                                             Products Management
                                                         </DropdownItem>
-                                                    </Link>
-                                                    <Link to="/management-article" style={{ color: "#2d3436" }} className="nav-link">
+                                                    </Link> */}
+                                                    <Link to="/product-management" style={{ color: "#2d3436" }} className="nav-link">
                                                         <DropdownItem>
-                                                            Management Article
+                                                            Product Management 
+                                                        </DropdownItem>
+                                                    </Link>
+                                                    <Link to="/transaction-management" style={{ color: "#2d3436" }} className="nav-link">
+                                                        <DropdownItem>
+                                                            Transaction Management 
+                                                        </DropdownItem>
+                                                    </Link>
+                                                    <Link to="/article-management" style={{ color: "#2d3436" }} className="nav-link">
+                                                        <DropdownItem>
+                                                            Article Management 
                                                         </DropdownItem>
                                                     </Link>
                                                     <DropdownItem divider />

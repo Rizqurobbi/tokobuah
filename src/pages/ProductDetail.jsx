@@ -75,6 +75,7 @@ const ProductDetail = (props) => {
     //         }
     //     }
     // }
+    
     const btnAddToCart = async () => {
         if (selectedType.type) {
             let dataCart = {
@@ -87,18 +88,24 @@ const ProductDetail = (props) => {
             }
             let temp = [...cart]
             temp.push(dataCart)
-            if (iduser) {
-                let res = await dispatch(updateUserCart(temp, iduser))
-                if (res.success) {
+            if(iduser){
+                let res = await dispatch(updateUserCart(temp,iduser))
+                if(res.success){
                     setRedirect(true)
+                } else {
+                    setToastOpen(true, setToastMsg("Silahkan Login Terlebih Dahulu"))
                 }
-            } else {
-                setToastOpen(true, setToastMsg("Silahkan Login terlebih dahulu"))
-            }
-        } else {
-            setToastOpen(true, setToastMsg("Pilih tipe produk terlebih dahulu"))
+            } 
+        }else{
+            setToastOpen(true,setToastMsg("Pilih Tipe Produk Terlebih Dahulu"))
         }
+
     }
+    const btnChooseType = (value) => {
+        setSelectedType(value, setCounter(1))
+
+    }
+
     if (redirect) {
         return <Navigate to="/cart-user" />
     }
@@ -113,11 +120,11 @@ const ProductDetail = (props) => {
                     {toastMsg}
                 </ToastBody>
             </Toast>
-            <div style={{ paddingTop: '12vh', paddingBottom: '3vh', display: 'flex', }}>
+            <div style={{ paddingTop: '2vh', paddingBottom: '3vh', display: 'flex', }}>
 
                 <a href="/products" className="mx-2 text-decoration-none" style={{ color: 'black' }}>Product</a>
 
-                <p>> {detail.nama}</p>
+                <p>/ {detail.nama}</p>
 
             </div>
             {console.log(detail)}
@@ -137,15 +144,15 @@ const ProductDetail = (props) => {
                             <div style={{}}>
                                 <h4 style={{}}>{detail.nama}</h4>
                                 <p style={{ fontSize: 18 }}>{detail.kategori}</p>
-                                <p style={{ fontWeight: 'bolder', color: 'red' }}>{detail.berat} gram/pcs</p>
-                                <h2 style={{ fontWeight: 'bolder', color: 'red' }}>Rp. {detail.harga.toLocaleString()}</h2>
+                                <p style={{ fontWeight: 'bolder', color: '#BE0B06' }}>{detail.berat} gram/pcs</p>
+                                <h2 style={{ fontWeight: 'bolder', color: '#BE0B06' }}>Rp. {detail.harga.toLocaleString()}</h2>
                                 <div style={{ marginTop: 20 }}>
                                     <p style={{ fontSize: 18 }}>Choose type and check the stock</p>
                                     {
                                         detail.stock.map((value, index) => {
                                             return (
                                                 <div style={{ marginBottom: 10 }}>
-                                                    <Button onClick={() => setSelectedType(value, setCounter(1))} style={{ borderRadius: 0, backgroundColor: 'black' }}>{value.type} : {value.qty}</Button>
+                                                    <Button onClick={() => btnChooseType(value)} style={{ borderRadius: 0, backgroundColor: 'black' }}>{value.type} : {value.qty}</Button>
                                                 </div>
                                             )
                                         })
@@ -176,7 +183,7 @@ const ProductDetail = (props) => {
                 </>
 
             }
-            
+
         </div>
     )
 }

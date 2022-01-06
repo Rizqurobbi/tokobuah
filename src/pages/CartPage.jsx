@@ -16,22 +16,7 @@ class CartPage extends React.Component {
     tesKriuk = () => {
         this.tes.value = ""
     }
-    prinCart = () => {
-        return this.props.cart.map((value, index) => {
-            return (
-                <div className="row" style={{ borderBottom: '1px solid grey' }}>
-                    <div className="col-2">
-                        <img width="100%" src={value.image} />
-                    </div>
-                    <div className="col-3 d-flex justify-content-center flex-column">
-                        <h3>{value.nama}</h3>
-                        <h3>Rp. {value.harga.toLocaleString()}</h3>
-                    </div>
-
-                </div>
-            )
-        })
-    }
+    
     btnIncrement = (index) => {
         let temp = [...this.props.cart];
         if (temp[index].qty <= temp[index].qty) {
@@ -99,7 +84,7 @@ class CartPage extends React.Component {
                             <img width="100%" src={value.image} />
                         </div>
                         <div className="mx-3" style={{ padding: 15 }}>
-                            <p style={{ fontSize: 14, color: 'red' }}>{value.nama}</p>
+                            <p style={{ fontSize: 14, color: '#BE0B06' }}>{value.nama}</p>
                             <p style={{ fontSize: 14, marginTop: "-2.7vh", color: 'grey' }}>{value.berat}gram/pcs</p>
                             <p style={{ fontSize: 14, marginTop: "-2.7vh", color: 'grey' }}>{value.berat * value.qty}gram(Total)</p>
                         </div>
@@ -120,7 +105,7 @@ class CartPage extends React.Component {
                         <p style={{ textAlign: 'center', marginTop: 45 }}>Rp. {value.harga * value.qty.toLocaleString()}</p>
                     </td>
                     <td>
-                        <span style={{ color: 'red', marginLeft: 53, marginTop: 45, cursor: 'pointer' }} className="material-icons" onClick={() => this.btnRemove(index)}>
+                        <span style={{ color: '#BE0B06', marginLeft: 53, marginTop: 45, cursor: 'pointer' }} className="material-icons" onClick={() => this.btnRemove(index)}>
                             delete
                         </span>
 
@@ -131,7 +116,7 @@ class CartPage extends React.Component {
     }
     render() {
         return (
-            <div className="container-fluid" style={{ marginTop: "10vh" }}>
+            <div className="container-fluid">
 
                 {/* <div className="row">
                     <div className="col-8" style={{borderBottom:'5px solid red',marginBottom:'4vh', marginTop:'4vh'}}>

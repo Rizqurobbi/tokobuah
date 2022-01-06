@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { connect, useDispatch } from 'react-redux';
 import { onLogin } from '../redux/actions';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input, Row, Col, Toast, ToastHeader, ToastBody, Container } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input, Row, Col, Toast, ToastHeader, ToastBody, Container, InputGroup, InputGroupText } from 'reactstrap';
 import { Navigate } from 'react-router';
 import { useSelector } from 'react-redux';
 // const ModalLogin = (props) => {
@@ -62,7 +62,9 @@ class ModalLogin extends React.Component {
             toastOpen: false,
             toastHeader: "",
             toastMessage: "",
-            toastIcon: ""
+            toastIcon: "",
+            passShow: "",
+            passType: ""
         }
     }
     btnLogin = async () => {
@@ -96,6 +98,24 @@ class ModalLogin extends React.Component {
         }
 
     }
+    btnShowPass = () => {
+        if (this.state.passType == "password") {
+            this.setState({
+                passShow: <span class="material-icons">
+                visibility
+                </span>,
+                passType: "text"
+            })
+        } else {
+            this.setState({
+                passShow: <span class="material-icons">
+                visibility_off
+                </span>
+                ,
+                passType: "password"
+            })
+        }
+    }
     render() {
         return (
             <Modal isOpen={this.props.modalOpen} toggle={this.props.btClose} centered >
@@ -109,10 +129,10 @@ class ModalLogin extends React.Component {
                     </ToastBody>
 
                 </Toast>
-                <Container style={{padding:'5vw'}}>
+                <Container style={{ padding: '5vw' }}>
                     <ModalHeader>
-                        <img style={{marginLeft:'7vh'}} src="https://cdn.shopify.com/s/files/1/0572/5005/4294/files/cc-removebg-preview.png?v=1624871969" width="180px" />
-                        <p style={{marginLeft:'6vh'}}>Great to have you back!</p>
+                        <img style={{ marginLeft: '7vh' }} src="https://cdn.shopify.com/s/files/1/0572/5005/4294/files/cc-removebg-preview.png?v=1624871969" width="180px" />
+                        <p style={{ marginLeft: '6vh' }}>Great to have you back!</p>
                     </ModalHeader>
                     <ModalBody>
                         <FormGroup>
@@ -121,8 +141,12 @@ class ModalLogin extends React.Component {
                         </FormGroup>
                         <FormGroup>
                             <Label for="textPass">Password</Label>
-                            <Input type="text" id="textPass" innerRef={(e) => this.password = e} />
-                            { }
+                            <InputGroup>
+                                <Input type={this.state.passType} id="textPass" innerRef={(e) => this.password = e} />
+                                <InputGroupText style={{ cursor: 'pointer',background:'transparent' }} onClick={this.btnShowPass}>
+                                    {this.state.passShow}
+                                </InputGroupText>
+                            </InputGroup>
                         </FormGroup>
                     </ModalBody>
                     <ModalFooter>
