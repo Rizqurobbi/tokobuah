@@ -16,7 +16,7 @@ class CartPage extends React.Component {
     tesKriuk = () => {
         this.tes.value = ""
     }
-    
+
     btnIncrement = (index) => {
         let temp = [...this.props.cart];
         if (temp[index].qty <= temp[index].qty) {
@@ -57,23 +57,23 @@ class CartPage extends React.Component {
         this.props.cart.forEach((value) => total += value.qty * value.berat)
         return total
     }
-    btnCheckOut =()=>{
+    btnCheckOut = () => {
         const d = new Date()
-        axios.post(`${API_URL}/userTransactions`,{
-            iduser:this.props.iduser,
-            username:this.props.username,
-            invoice:`#INV/${d.getTime()}`,
-            date:d.toLocaleDateString(),
-            totalPrice:this.totalPrice(),
-            shipping:this.shipping(),
-            totalPayment:this.totalPayment(),
-            totalBeratBuah:this.totalBeratBuah(),
-            detail:[...this.props.cart],
-            status :'Menunggu Konfirmasi'
+        axios.post(`${API_URL}/userTransactions`, {
+            iduser: this.props.iduser,
+            username: this.props.username,
+            invoice: `#INV/${d.getTime()}`,
+            date: d.toLocaleDateString(),
+            totalPrice: this.totalPrice(),
+            shipping: this.shipping(),
+            totalPayment: this.totalPayment(),
+            totalBeratBuah: this.totalBeratBuah(),
+            detail: [...this.props.cart],
+            status: 'Menunggu Konfirmasi'
         })
-        .then((res)=>{
-            this.props.updateUserCart([],this.props.iduser)
-        })
+            .then((res) => {
+                this.props.updateUserCart([], this.props.iduser)
+            })
     }
     printCart = () => {
         return this.props.cart.map((value, index) => {
@@ -116,7 +116,7 @@ class CartPage extends React.Component {
     }
     render() {
         return (
-            <div className="container-fluid">
+            <div style={{ marginTop: '-3vh' }}>
 
                 {/* <div className="row">
                     <div className="col-8" style={{borderBottom:'5px solid red',marginBottom:'4vh', marginTop:'4vh'}}>
@@ -128,7 +128,19 @@ class CartPage extends React.Component {
                     <div className="col-4">
                         <p>halo</p>
                     </div>
+                    
                 </div> */}
+                <div className="text-center" style={{ backgroundSize: 'cover', backgroundImage: `url(https://cdn.shopify.com/s/files/1/0572/5005/4294/files/3_3286356e-a5c3-4a76-b912-785fd3e1af7c.jpg?v=1623740220)`, backgroundRepeat: 'no-repeat', width: '100%', height: '50vh' }}>
+                    <div className="title-page" style={{paddingTop:'17vh',}}>
+                        <h1>Cart</h1>
+                    </div>
+                    <div>
+                        <Link to="/">
+                            <a className="mx-4" style={{fontWeight:'bold',textDecoration:'transparent',color:'black',alignItems:'center'}} title="Back to the Homepage">Home</a>
+                        </Link>
+                        <strong>Your Shopping Cart</strong>
+                    </div>
+                </div>
                 <div className="container" style={{ padding: '10vh' }}>
                     <Table bordered style={{ height: 20 }}>
                         <thead>
@@ -150,7 +162,7 @@ class CartPage extends React.Component {
                             <div>
                                 <div style={{ justifyContent: 'space-between', borderBottom: '1px solid grey', }}>
                                     <p>Cart Total <Badge>{this.props.cart.length}</Badge></p>
-                                    <div style={{ display: 'flex',justifyContent: 'space-between' }}>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                                         <p>Total Berat Buah</p>
                                         <p>{this.totalBeratBuah()}gram</p>
                                     </div>
@@ -167,7 +179,7 @@ class CartPage extends React.Component {
                                     <p>Total Payment</p>
                                     <p>Rp. {(this.totalPayment()).toLocaleString()}</p>
                                 </div>
-                                <Button style={{ height: '60px', marginTop: '3vh', marginBottom: '3vh', borderRadius: 0, backgroundColor: 'black', width: 300 }}onClick={()=>this.btnCheckOut()}>PROCEED TO CHECKOUT</Button>
+                                <Button style={{ height: '60px', marginTop: '3vh', marginBottom: '3vh', borderRadius: 0, backgroundColor: 'black', width: 300 }} onClick={() => this.btnCheckOut()}>PROCEED TO CHECKOUT</Button>
                                 <Link to="/products">
                                     <p style={{ color: '#BE0B06', float: 'right', cursor: 'pointer' }} >Continue Shopping</p>
                                 </Link>
@@ -196,7 +208,7 @@ const mapToProps = (state) => {
     return {
         cart: state.userReducer.cart,
         iduser: state.userReducer.id,
-        username :state.userReducer.username
+        username: state.userReducer.username
     }
 }
 export default connect(mapToProps, { updateUserCart })(CartPage);

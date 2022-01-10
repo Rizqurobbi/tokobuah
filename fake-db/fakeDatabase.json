@@ -15,24 +15,7 @@
       "password": "1234",
       "role": "User",
       "status": "Active",
-      "cart": [
-        {
-          "nama": "Banana",
-          "harga": 30000,
-          "berat": 2500,
-          "image": "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/2.1.jpg?v=1623394147",
-          "type": "Ambon",
-          "qty": 1
-        },
-        {
-          "nama": "Orange",
-          "harga": 2285,
-          "berat": "140",
-          "image": "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/11.1.jpg?v=1623396707",
-          "type": "Mandarin",
-          "qty": 1
-        }
-      ],
+      "cart": [],
       "id": 2
     },
     {
@@ -455,6 +438,118 @@
       ],
       "status": "Pesanan Batal",
       "id": 5
+    },
+    {
+      "iduser": 2,
+      "username": "Zakki",
+      "invoice": "#INV/1641649605024",
+      "date": "1/8/2022",
+      "totalPrice": 34570,
+      "shipping": 6914,
+      "totalPayment": 41484,
+      "totalBeratBuah": 2780,
+      "detail": [
+        {
+          "nama": "Banana",
+          "harga": 30000,
+          "berat": 2500,
+          "image": "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/2.1.jpg?v=1623394147",
+          "type": "Ambon",
+          "qty": 1
+        },
+        {
+          "nama": "Orange",
+          "harga": 2285,
+          "berat": "140",
+          "image": "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/11.1.jpg?v=1623396707",
+          "type": "Mandarin",
+          "qty": 1
+        },
+        {
+          "nama": "Orange",
+          "harga": 2285,
+          "berat": "140",
+          "image": "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/11.1.jpg?v=1623396707",
+          "type": "Mandarin",
+          "qty": 1
+        }
+      ],
+      "status": "Pesanan Batal",
+      "id": 6
+    },
+    {
+      "iduser": 2,
+      "username": "Zakki",
+      "invoice": "#INV/1641734558126",
+      "date": "1/9/2022",
+      "totalPrice": 22285,
+      "shipping": 4457,
+      "totalPayment": 26742,
+      "totalBeratBuah": 3140,
+      "detail": [
+        {
+          "nama": "Watermelon",
+          "harga": 20000,
+          "berat": 3000,
+          "image": "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/10.1.jpg?v=1623396512",
+          "type": "Sweet Beauty",
+          "qty": 1
+        },
+        {
+          "nama": "Orange",
+          "harga": 2285,
+          "berat": "140",
+          "image": "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/11.1.jpg?v=1623396707",
+          "type": "Mandarin",
+          "qty": 1
+        }
+      ],
+      "status": "Pesanan Batal",
+      "id": 7
+    },
+    {
+      "iduser": 2,
+      "username": "Zakki",
+      "invoice": "#INV/1641734565880",
+      "date": "1/9/2022",
+      "totalPrice": 9500,
+      "shipping": 1900,
+      "totalPayment": 11400,
+      "totalBeratBuah": 600,
+      "detail": [
+        {
+          "nama": "Peaches",
+          "harga": 9500,
+          "berat": 600,
+          "image": "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/8.1.jpg?v=1623395812",
+          "type": "Abacaxi",
+          "qty": 1
+        }
+      ],
+      "status": "Pesanan Batal",
+      "id": 8
+    },
+    {
+      "iduser": 2,
+      "username": "Zakki",
+      "invoice": "#INV/1641734582006",
+      "date": "1/9/2022",
+      "totalPrice": 9500,
+      "shipping": 1900,
+      "totalPayment": 11400,
+      "totalBeratBuah": 7000,
+      "detail": [
+        {
+          "nama": "Durian",
+          "harga": 9500,
+          "berat": 7000,
+          "image": "https://cdn.shopify.com/s/files/1/0572/5005/4294/products/13.1.jpg?v=1623397015",
+          "type": "Abacaxi",
+          "qty": 1
+        }
+      ],
+      "status": "Terima Pesanan",
+      "id": 9
     }
   ],
   "articles": [
@@ -473,7 +568,7 @@
     {
       "image": "https://cdn.shopify.com/s/files/1/0572/5005/4294/articles/9_1024x1024.jpg?v=1623404499",
       "judul": "Fruit juice and its effects",
-      "deskripsi": "1. What Is Fruit Juice?\nFruit juice is a drink made from fruits found in nature by the method of squeezing, distilling the residue and taking only water. Each type of fruit is rich in vitamins and nutrients that provide different health benefits. This is one of the natural, healthy foods and brings high nutritional value to human health if we use them properly and in moderation.\n\n2. Is Fruit Juice Really Good?\nSupplement vitamins and minerals\n\nOur bodies always need a lot of vitamins and minerals to function properly, fortunately, vegetables and fruits contain a lot of nutrients that we need. It's not just that we choose colorful vegetables and fruits, different colors will bring a different benefit to the body. Beets nourish blood, oranges help increase vitamin C and thousands of other useful fruits. If you are afraid of eating vegetables or fruits, you can squeeze the juice and drink it too!\n\nProvides abundant fiber\n\nNo need to introduce, the fiber that the body needs is in the fruits and vegetables that we eat every day. However, the carcass contains a significant amount of fiber, so you might want to consider drinking fruit juice and eating the whole piece of fruit.\n\nSupports weight loss and body cleansing\n\nIf you are in the process of losing weight, the eating becomes more demanding, so it is very necessary to support from juicing. A cup of unsweetened fruit juice will help you feel more comfortable, eat more delicious. However, you should not just use fruit juices to lose weight because they have no protein as well as completely fiber. In addition, some fruits are also high in sugar, not only can not lose weight, but also increase cravings more. Therefore, you should only use juices to support weight loss, not completely depend on them!",
+      "deskripsi": "1. What Is Fruit Juice? Fruit juice is a drink made from fruits found in nature by the method of squeezing, distilling the residue and taking only water. Each type of fruit is rich in vitamins and nutrients that provide different health benefits. This is one of the natural, healthy foods and brings high nutritional value to human health if we use them properly and in moderation. 2. Is Fruit Juice Really Good? Supplement vitamins and minerals Our bodies always need a lot of vitamins and minerals to function properly, fortunately, vegetables and fruits contain a lot of nutrients that we need. It's not just that we choose colorful vegetables and fruits, different colors will bring a different benefit to the body. Beets nourish blood, oranges help increase vitamin C and thousands of other useful fruits. If you are afraid of eating vegetables or fruits, you can squeeze the juice and drink it too! Provides abundant fiber No need to introduce, the fiber that the body needs is in the fruits and vegetables that we eat every day. However, the carcass contains a significant amount of fiber, so you might want to consider drinking fruit juice and eating the whole piece of fruit. Supports weight loss and body cleansing If you are in the process of losing weight, the eating becomes more demanding, so it is very necessary to support from juicing. A cup of unsweetened fruit juice will help you feel more comfortable, eat more delicious. However, you should not just use fruit juices to lose weight because they have no protein as well as completely fiber. In addition, some fruits are also high in sugar, not only can not lose weight, but also increase cravings more. Therefore, you should only use juices to support weight loss, not completely depend on them!",
       "id": 3
     }
   ]

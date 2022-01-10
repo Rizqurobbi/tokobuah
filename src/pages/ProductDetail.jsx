@@ -40,11 +40,11 @@ const ProductDetail = (props) => {
         let { images } = detail
         return images.map((value, index) => {
             return (
-                <img className="select-image mb-1 shadow bg-white rounded" src={value}
+                <img className="select-image mb-1 shadow bg-white rounded mx-2" src={value}
                     key={index}
                     width="100%"
                     onClick={() => setThumbnail(index)}
-                    style={{ borderBottom: thumbnail == index && "3px solid red" }}
+                    style={{ border: thumbnail == index && "3px solid red" }}
                 />
             )
         })

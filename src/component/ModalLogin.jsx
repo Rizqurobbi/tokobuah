@@ -63,7 +63,9 @@ class ModalLogin extends React.Component {
             toastHeader: "",
             toastMessage: "",
             toastIcon: "",
-            passShow: "",
+            passShow: <span class="material-icons">
+            visibility
+            </span>,
             passType: ""
         }
     }

@@ -15,6 +15,8 @@ import TransactionAdminPage from './pages/TransactionManagement';
 import DetailNewsPage from './pages/DetailNews';
 import ArticleManagement from './pages/ArticleManagement'
 import ProductManagement from './pages/ManagementProduct';
+import RevisiGaming from './pages/cobaDetailProduct';
+
 
 
 
@@ -61,6 +63,7 @@ class App extends React.Component {
           <Route path="/products" element={<ProductPage />} />
           <Route path="/product-detail" element={<ProductDetail />} />
           <Route path="/detail-news" element={<DetailNewsPage />} />
+          <Route path="/aa" element={<RevisiGaming />} />
           {this.props.role == "User" ?
             <>
               <Route path="/cart-user" element={<CartPage />} />
