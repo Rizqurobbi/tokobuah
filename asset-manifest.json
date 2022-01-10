@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/tokobuah/static/css/main.9c69c409.css",
+    "main.js": "/tokobuah/static/js/main.638fd623.js",
+    "static/js/787.4e2fd409.chunk.js": "/tokobuah/static/js/787.4e2fd409.chunk.js",
+    "static/media/logo.svg": "/tokobuah/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/tokobuah/index.html",
+    "main.9c69c409.css.map": "/tokobuah/static/css/main.9c69c409.css.map",
+    "main.638fd623.js.map": "/tokobuah/static/js/main.638fd623.js.map",
+    "787.4e2fd409.chunk.js.map": "/tokobuah/static/js/787.4e2fd409.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9c69c409.css",
+    "static/js/main.638fd623.js"
+  ]
+}
