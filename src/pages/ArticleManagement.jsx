@@ -45,8 +45,6 @@ const ArticleManagement = (props) => {
     }
     const PrintArticle = () => {
         return articleList.map((value, index) => {
-
-
             return (
                 <tr>
                     <td>

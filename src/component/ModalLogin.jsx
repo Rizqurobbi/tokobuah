@@ -64,7 +64,7 @@ class ModalLogin extends React.Component {
             toastMessage: "",
             toastIcon: "",
             passShow: <span class="material-icons">
-            visibility
+                visibility
             </span>,
             passType: ""
         }
@@ -104,14 +104,14 @@ class ModalLogin extends React.Component {
         if (this.state.passType == "password") {
             this.setState({
                 passShow: <span class="material-icons">
-                visibility
+                    visibility
                 </span>,
                 passType: "text"
             })
         } else {
             this.setState({
                 passShow: <span class="material-icons">
-                visibility_off
+                    visibility_off
                 </span>
                 ,
                 passType: "password"
@@ -119,48 +119,54 @@ class ModalLogin extends React.Component {
         }
     }
     render() {
-        return (
-            <Modal isOpen={this.props.modalOpen} toggle={this.props.btClose} centered >
-                <Toast isOpen={this.state.toastOpen} style={{ position: 'fixed', marginLeft: '20vh', zIndex: 20 }}>
-                    <ToastHeader icon={this.state.toastIcon} toggle={() => this.setState({ toastOpen: false })}>
-                        {this.state.toastHeader}
+        if (this.props.iduser)
+            return (
+                <Modal isOpen={this.props.modalOpen} toggle={this.props.btClose} centered >
+                    <Toast isOpen={this.state.toastOpen} style={{ position: 'fixed', marginLeft: '20vh', zIndex: 20 }}>
+                        <ToastHeader icon={this.state.toastIcon} toggle={() => this.setState({ toastOpen: false })}>
+                            {this.state.toastHeader}
 
-                    </ToastHeader>
-                    <ToastBody>
-                        {this.state.toastMessage}
-                    </ToastBody>
+                        </ToastHeader>
+                        <ToastBody>
+                            {this.state.toastMessage}
+                        </ToastBody>
 
-                </Toast>
-                <Container style={{ padding: '5vw' }}>
-                    <ModalHeader>
-                        <img style={{ marginLeft: '7vh' }} src="https://cdn.shopify.com/s/files/1/0572/5005/4294/files/cc-removebg-preview.png?v=1624871969" width="180px" />
-                        <p style={{ marginLeft: '6vh' }}>Great to have you back!</p>
-                    </ModalHeader>
-                    <ModalBody>
-                        <FormGroup>
-                            <Label for="textNama">Username</Label>
-                            <Input type="text" id="textNama" innerRef={(e) => this.username = e} />
-                        </FormGroup>
-                        <FormGroup>
-                            <Label for="textPass">Password</Label>
-                            <InputGroup>
-                                <Input type={this.state.passType} id="textPass" innerRef={(e) => this.password = e} />
-                                <InputGroupText style={{ cursor: 'pointer',background:'transparent' }} onClick={this.btnShowPass}>
-                                    {this.state.passShow}
-                                </InputGroupText>
-                            </InputGroup>
-                        </FormGroup>
-                    </ModalBody>
-                    <ModalFooter>
-                        <Button style={{ width: '100%' }} onClick={() => { this.btnLogin() }}>Login</Button>
-                        <a style={{ margin: 'auto' }} >Don't have an account?
-                            <a style={{ cursor: 'pointer' }} onClick={() => { this.props.modalOpenRegis(); this.props.btClose() }}> Register here</a>
-                        </a>
-                    </ModalFooter>
-                </Container>
-            </Modal>
-        );
+                    </Toast>
+                    <Container style={{ padding: '5vw' }}>
+                        <ModalHeader>
+                            <img style={{ marginLeft: '7vh' }} src="https://cdn.shopify.com/s/files/1/0572/5005/4294/files/cc-removebg-preview.png?v=1624871969" width="180px" />
+                            <p style={{ marginLeft: '6vh' }}>Great to have you back!</p>
+                        </ModalHeader>
+                        <ModalBody>
+                            <FormGroup>
+                                <Label for="textNama">Username</Label>
+                                <Input type="text" id="textNama" innerRef={(e) => this.username = e} />
+                            </FormGroup>
+                            <FormGroup>
+                                <Label for="textPass">Password</Label>
+                                <InputGroup>
+                                    <Input type={this.state.passType} id="textPass" innerRef={(e) => this.password = e} />
+                                    <InputGroupText style={{ cursor: 'pointer', background: 'transparent' }} onClick={this.btnShowPass}>
+                                        {this.state.passShow}
+                                    </InputGroupText>
+                                </InputGroup>
+                            </FormGroup>
+                        </ModalBody>
+                        <ModalFooter>
+                            <Button style={{ width: '100%' }} onClick={() => { this.btnLogin() }}>Login</Button>
+                            <a style={{ margin: 'auto' }} >Don't have an account?
+                                <a style={{ cursor: 'pointer' }} onClick={() => { this.props.modalOpenRegis(); this.props.btClose() }}> Register here</a>
+                            </a>
+                        </ModalFooter>
+                    </Container>
+                </Modal>
+            );
     }
 }
+const mapToProps = (state) => {
+return{
+    iduser : state.userReducer.id
+}
+}
 
-export default connect(null, { onLogin })(ModalLogin);
+export default connect(mapToProps, { onLogin })(ModalLogin);
