@@ -119,7 +119,7 @@ class ModalLogin extends React.Component {
         }
     }
     render() {
-        if (this.props.iduser)
+       
             return (
                 <Modal isOpen={this.props.modalOpen} toggle={this.props.btClose} centered >
                     <Toast isOpen={this.state.toastOpen} style={{ position: 'fixed', marginLeft: '20vh', zIndex: 20 }}>
